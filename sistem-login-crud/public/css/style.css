@@ -1,0 +1,252 @@
+/* public/css/style.css */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 25px;
+    background-color: #fff;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    border-radius: 8px;
+}
+
+/* Header and Navigation */
+.header-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #eee;
+    flex-wrap: wrap;
+}
+
+.header-nav h2 {
+    margin: 0;
+    font-size: 1.8em;
+    color: #2c3e50;
+}
+
+.header-nav div {
+    font-size: 0.95em;
+}
+
+/* Forms */
+form div {
+    margin-bottom: 20px;
+}
+
+form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #2c3e50;
+}
+
+form input[type="text"],
+form input[type="password"],
+form input[type="email"],
+form select {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: 6px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+form input:focus,
+form select:focus {
+    border-color: #3498db;
+    outline: none;
+    box-shadow: 0 0 5px rgba(52,152,219,0.2);
+}
+
+/* Buttons */
+.btn,
+button,
+.btn-edit,
+.btn-delete {
+    display: inline-block;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    margin: 2px;
+}
+
+.btn,
+button {
+    background-color: #3498db;
+    color: white;
+}
+
+.btn:hover,
+button:hover {
+    background-color: #2980b9;
+}
+
+.btn-edit {
+    background-color: #f1c40f;
+    color: #2c3e50;
+}
+
+.btn-edit:hover {
+    background-color: #f39c12;
+}
+
+.btn-delete {
+    background-color: #e74c3c;
+    color: white;
+}
+
+.btn-delete:hover {
+    background-color: #c0392b;
+}
+
+/* Messages */
+.message,
+.errors,
+.success,
+.warning {
+    padding: 15px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.message.success,
+.success {
+    background-color: #dff0d8;
+    color: #3c763d;
+    border-left: 4px solid #3c763d;
+}
+
+.message.error,
+.errors {
+    background-color: #f2dede;
+    color: #a94442;
+    border-left: 4px solid #a94442;
+}
+
+.message.warning,
+.warning {
+    background-color: #fcf8e3;
+    color: #8a6d3b;
+    border-left: 4px solid #8a6d3b;
+}
+
+/* Tables */
+.table-responsive {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 25px 0;
+    background-color: white;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+table th,
+table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #e1e1e1;
+}
+
+table th {
+    background-color: #f8f9fa;
+    font-weight: 600;
+    color: #2c3e50;
+}
+
+table tr:hover {
+    background-color: #f5f6fa;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .container {
+        width: 95%;
+        padding: 15px;
+    }
+
+    .header-nav {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .header-nav div {
+        margin-top: 15px;
+    }
+
+    table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    .btn,
+    button,
+    .btn-edit,
+    .btn-delete {
+        display: block;
+        width: 100%;
+        margin-bottom: 5px;
+    }
+}
+
+/* Small screens */
+@media screen and (max-width: 480px) {
+    table th,
+    table td {
+        padding: 8px 10px;
+        font-size: 14px;
+    }
+
+    .container {
+        padding: 10px;
+    }
+}
+
+/* Print styles */
+@media print {
+    .btn,
+    .btn-edit,
+    .btn-delete,
+    form,
+    .header-nav div a {
+        display: none;
+    }
+
+    body {
+        background: white;
+    }
+
+    .container {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        box-shadow: none;
+    }
+
+    table {
+        box-shadow: none;
+    }
+}
